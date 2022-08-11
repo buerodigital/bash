@@ -20,11 +20,14 @@ echo "Adding External Rules"
 echo -e "=====\n"
 
 #Anpassen
-sudo ufw allow 22 comment "SSH"
-sudo ufw allow 80 comment "HTTP"
-sudo ufw allow 443 comment "HTTPS"
-sudo ufw allow 1080 comment "HTTP - OnlyOffice"
-sudo ufw allow 1443 comment "HTTPS - OnlyOffice"
+ufw allow 22 comment "SSH"
+ufw allow 80 comment "HTTP"
+ufw allow 443 comment "HTTPS"
+ufw allow 8080 comment "HTTP - OnlyOffice"
+ufw allow 8443 comment "HTTPS - OnlyOffice"
+ufw allow 4300 comment "HTTPS - Shell in a box"
+ufw allow 3478/tcp comment "COTURN"
+ufw allow 3478/ud comment "COTURN"
 
 
 echo "Enabling Firewall"
